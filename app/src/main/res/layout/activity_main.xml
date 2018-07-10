@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+android:layout_width="match_parent"
+android:id="@+id/activity_main">
+
+
+    <TextView
+        android:id="@+id/empty_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="150dp"
+        android:text="Ooops, Error connecting to server..."
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+
+    <ImageView
+        android:id="@+id/error_connection"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/dino"
+        android:visibility="invisible"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/user_interface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        android:visibility="invisible"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/powi_logo"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="120dp"
+                android:src="@drawable/powi_logo"
+                />
+
+            <ImageView
+                android:id="@+id/mid_power"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:src="@drawable/mid_power"
+
+                />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:text="Power Control"
+            android:textAllCaps="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/power_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="32dp"
+            android:src="@drawable/power_button"
+            android:foreground="?android:attr/selectableItemBackground"
+            />
+
+        <TextView
+            android:id="@+id/power_button_state"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="4dp"
+            android:text="OFF"
+            />
+
+
+        <TextView
+            android:text="Speed Control"
+            android:textAllCaps="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:max="100"
+            />
+
+
+    </LinearLayout>
+
+
+
+<ProgressBar
+    android:id="@+id/loading_spinner"
+    style="?android:progressBarStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    />
+
+
+</FrameLayout>
