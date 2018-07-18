@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     char powerButtonState;
     SeekBar speedControlSeekbar;
     int pwmDutyCycle;
+    TextView speedTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         powerButtonStateTextView = (TextView) findViewById(R.id.power_button_state);
 
         speedControlSeekbar = (SeekBar) findViewById(R.id.seekBar);
+
+        speedTextView = (TextView) findViewById(R.id.speedText);
 
 
        //Set up bluetooth
@@ -122,6 +125,8 @@ public class MainActivity extends AppCompatActivity {
                     mOutputStream = client_socket.getOutputStream();
 
                     writeBytes(String.valueOf(progress).getBytes());
+
+                    speedTextView.setText(String.valueOf(progress));
 
             }catch (IOException e){
 
